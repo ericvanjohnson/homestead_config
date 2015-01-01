@@ -1,0 +1,36 @@
+---
+ip: "192.168.10.10"
+memory: 2048
+cpus: 1
+
+authorize: ~/.ssh/id_rsa.pub
+
+keys:
+    - ~/.ssh/id_rsa
+
+folders:
+    - map: /Users/eric/Dropbox/Projects/Clients/NetworxOnline/Projects
+      to: /home/vagrant/Nutrie
+    - map: /Users/eric/Documents/GitRepos
+      to: /home/vagrant/Repos
+
+sites:
+    - map: zyx.dev
+      to: /home/vagrant/Repos/DiegoDev/zyx-api/public
+    - map: homestead.app
+      to: /home/vagrant/Code/Laravel/public
+    - map: weekendinterest.dev
+      to: /home/vagrant/Repos/Heroku/WeekendInterest/code/public
+    - map: nutrie-nls.dev
+      to: /home/vagrant/Repos/nutrie/nutrie-live-services-repos/nutrie-live-services/public
+    - map: diegodev.dev
+      to: /home/vagrant/Repos/DiegoDev/diegodev-site/site/public
+    - map: grouptopics.dev
+      to: /home/vagrant/Repos/SDPHP/Grouptopics/grouptopics.org/public
+
+databases:
+    - homestead
+
+variables:
+    - key: APP_ENV
+      value: homestead
